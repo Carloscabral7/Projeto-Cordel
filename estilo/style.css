@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
 :root {
-    --fonte-padrao:'verdana, sans-serif' ;
-    --fonte-destaque:'passion one' ;
-    --fonte-destaque2:'sriracha' ;
+    --fonte-padrao:'Verdana, Geneva, Tahoma, sans-serif';
+    --fonte-destaque:'passion one', 'cursive';
+    --fonte-destaque2:'Sriracha','cursive';
 
     --cor1: #ffffff;
     --cor2: #000;
@@ -23,68 +23,94 @@ html, body {
 
 header {
     background-color: var(--cor2);
-    
 }
 
 header > h1 {
-    color: var(--cor1);text-align: center;
     padding-top: 50px;
     font-variant: small-caps;
     font-family: var(--fonte-destaque);
     font-size: 10vw;
     font-weight: bold;
+    text-align: center;
+    color: var(--cor1); 
 }
 header > p {
     padding-bottom: 50px;
+    font-size: 18px;
+    font-family: var(--fonte-padrao);
     text-align: center;
     color: var(--cor1);
-    font-size: 1.3em;
 }
 
 header > p > a {
-    color: var(--cor1);
-    text-decoration: none;
     font-weight: bolder;
+    color: var(--cor1);
+    text-decoration: none; 
+}
+
+header > p > a:hover {
+    text-decoration: underline;
+    color: lightgreen;
 }
 
 section {
     padding-left: 30px;
     padding-bottom: 10vh;
     padding-top: 10vh;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-family: var(--fonte-destaque2);
     line-height: 2em;
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 .normal {
     background-color: var(--cor1);
-    
 }
 
 .imagem {
-    
-    color: var(--cor1);
     background-color:rgb(59, 59, 59);
     background-image: url('imagens\background001.jpg');
+    color: var(--cor1);
 }
 
 .imagem > p {
-    padding: 5px;
+    padding: 10px;
     display: inline-block;
-    background-color: #0000005b;
+    border-radius: 10px;
+    background-color: #00000062;
+    text-shadow: 2px 2px 1px  black;
+}
+
+section#img01 {
+    box-shadow: inset 7px 7px 13px 0px rgba(0, 0, 0, 0.61);
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section#img02 {
+    box-shadow: inset 7px 7px 12px 0px rgba(0, 0, 0, 0.685);
+    background-position: right center;
+    background-size: cover;
+    background-image: url('../imagens/background002.jpg');
+    background-attachment: fixed;
 }
 
 footer {
-    color: var(--cor1);
-    background-color: var(--cor2);
     padding: 10px;
+    background-color: var(--cor2);
     text-align: center;
+    color: var(--cor1);
 }
 
 footer > p > a {
-    color: var(--cor1);
     text-decoration: none;
     font-weight: bolder;
+    color: var(--cor1);
 }
 footer > p > a:hover {
     text-decoration: underline;
